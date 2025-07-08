@@ -1,0 +1,174 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --gradient-angle: 360deg;
+    }
+}
+
+input[type='radio']{
+    display: none;
+}
+
+#skills-section > #labels{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3rem;
+    color: beige;
+    backdrop-filter: blur(5px);
+}
+
+#skills-section > #labels label {
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(231, 30, 187, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#skills-section > #labels label:hover {
+    transform: translateY(-3px);
+    background-color: #f8acff;
+    color: #0d3d23;
+}
+#skills-section > #labels input[type="radio"]:checked + label {
+    transform: translateY(-3px);
+    background-image: linear-gradient(rgb(153, 17, 245), rgb(240, 48, 240));
+    border: none;
+    color: #0d3d23;
+}
+
+#content-container{
+    width: inherit;
+    height: auto;
+    max-height: 29rem;
+    display: flex;
+    margin-top: 0.5rem;
+    padding: 2rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#content-container.fade {
+    opacity: 0;
+}
+
+#inner-skills-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    justify-items: space-around;
+    overflow-x: scroll;
+}
+
+.skill-container{
+    width: 33%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid white;
+    padding: 1rem;
+    padding-bottom: 2.8rem;
+    overflow-x: scroll;
+    max-height: 220px;
+    overflow: scroll;
+}
+
+.skill-container:last-child {
+    border: none;
+}
+
+.skill-field {
+    color: yellow;
+    font-size: 1.7vw;
+    margin-bottom: 1rem;
+}
+
+.skill {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.skill-icon {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.skill-name {
+    color: purple;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.skill-container::-webkit-scrollbar, #inner-skills-container::-webkit-scrollbar {
+    display: none;
+}
+
+.skill-container, #inner-skills-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#certificates {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+#active-certificate, #left-certificate, #right-certificate {
+    background-color: white;
+    width: 20rem;
+    height: 12rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#active-certificate img, #left-certificate img, #right-certificate img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#active-certificate {
+    transform: scale(1);
+}
+
+#left-certificate, #right-certificate {
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+
+#left-certificate:hover, #right-certificate:hover {
+    opacity: 1;
+    transform: scale(0.85);
+}
+
+@media (max-width: 767px) {
+    .skill-name{
+        font-size: 0.8rem;
+    }
+    .skill-icon {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    #active-certificate, #left-certificate, #right-certificate {
+        background-color: white;
+        width: 16rem;
+        height: 10rem;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+}

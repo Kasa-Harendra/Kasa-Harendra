@@ -1,0 +1,94 @@
+#projects-container {
+    width: 100%;
+    margin-top: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-left, .project-right {
+    width: 90%;
+    margin-bottom: 1rem; 
+    display: flex;
+    align-items: center; 
+    gap: 2rem; 
+}
+
+.project-left > a , .project-right > a {
+    flex: 1; 
+    min-width: 0; 
+}
+
+.project-left > a > img, .project-right > a > img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.project-left > div, .project-right > div {
+    flex: 1; 
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-right {
+    flex-direction: row-reverse;
+}
+
+.project-info  > h3, .project-info > p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    margin: 0.2rem;
+}
+
+.project-info > p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    height: 3rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.project-info > p::-webkit-scrollbar {
+    display: none;
+}
+
+.project-info > .links > a {
+    color : yellow;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 30%;
+}
+
+.gradient-cosmic {
+    background-image: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+
+#projects > h2, #contact > h2 {
+    text-align: center;
+    color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 767px) {
+    #projects > h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-left, .project-right {
+        flex-direction: column;
+        width: 100%;
+    }
+}
