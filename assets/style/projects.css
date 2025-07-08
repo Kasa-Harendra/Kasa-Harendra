@@ -46,7 +46,7 @@
 .project-info > p {
     font-size: 0.9rem;
     line-height: 1.5;
-    height: 3rem;
+    height: 4rem;
     overflow-y: scroll;
     -ms-overflow-style: none;  
     scrollbar-width: none; 
@@ -90,5 +90,8 @@
     .project-left, .project-right {
         flex-direction: column;
         width: 100%;
+    }
+    .project-info > p {
+        height: 3rem;
     }
 }
