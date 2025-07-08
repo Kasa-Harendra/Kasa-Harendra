@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/name-section.css">
+    <link rel="stylesheet" href="./assets/style/contact.css">
+    <link rel="stylesheet" href="./assets/style/skills-section.css">
+    <link rel="stylesheet" href="./assets/style/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
+">
+</head>
+<body>
+    <div class="navigation">
+        <nav class="navbar">
+            <li><a href="#Description"> Home</a></li>
+            <li><a href="#projects"> Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </nav>
+    </div>
+    <div id="blur-effect"></div>
+    <section id="Description">
+        <div id="main-content">
+            <div class="name-content">
+                <p id="name">Kasa Harendra</p>
+                <p class="name-description">
+                    I'm a <span class="highlight">Computer Science and Engineering</span> student with strong communication 
+                    skills and a passion for programming. I enjoy building projects that 
+                    enhance my understanding of <span class="highlight">data structures, algorithms, and software development</span>. 
+                    I'm eager to learn new technologies and grow as a skilled and creative developer.
+                </p>
+            </div>
+            <div id="communicate-icons">
+                <a href="https://www.linkedin.com/in/harendra-kasa-13a238329/" target="_blank"><i class="fa-brands fa-linkedin-in icon-size" style="background-color: rgb(62, 102, 244);"></i></a>
+                <a href="tel:+916304340332" target="_blank"><i class="fa-brands fa-whatsapp icon-size" style="background-color: rgb(5, 240, 134);"></i></a>
+                <a href="https://github.com/Kasa-Harendra/" target="_blank"><i class="fa-brands fa-github" style="background-color: rgb(161, 161, 161);"></i></a>
+                <a class="btn" href="./documents/Resume.pdf" target="_blank" download="./documents/resume.pdf" style="background-color: yellow;">Download CV</a>
+            </div>
+        </div>
+        <div id="photo">
+            <img class="dp" src="./assets/media/DP.jpg" alt="" >
+        </div> 
+    </section>
+    <hr>
+    <section id="skills-section">
+        <div id="labels">
+            <input type="radio" name="projects&skills" value="skills" id="skills" checked>
+            <label for="skills" class="projects&skills">Skills</label>
+            <input type="radio" name="projects&skills" value="certificates" id="certifications">
+            <label for="certifications" class="projects&skills">Certifications</label>
+        </div>
+        <div id="content-container"></div>
+    </section>
+    <hr>
+    <section id="projects">
+        <h2 class="gradient-cosmic">Projects</h2>
+        <div id="projects-container"></div>
+    </section>
+    <hr>
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="gradient-cosmic">Let's Work Together!</h2>
+                <p class="contact-description">
+                    Have a project in mind or just want to say hello? I'd love to hear from you. 
+                    Fill out the form, and I'll get back to you as soon as possible.
+                </p>
+                <div class="social-links">
+                    <!-- TODO: Replace with your actual profile URLs -->
+                    <a href="https://www.linkedin.com/in/harendra-kasa-13a238329/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="tel:+916304340332" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto: harendrakasa@gmail.com" target="_blank" class="social-icon mail" aria-label="mail"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <!-- TODO: Replace with your Formspree action URL -->
+                <form id="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contact.js"></script>
+</body>
+</html>

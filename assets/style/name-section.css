@@ -1,0 +1,77 @@
+#main-content{
+  width: 50vw;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#Description{
+    margin: 0 2rem;
+    margin-top: 4rem;
+    color:rgb(168, 125, 247);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#name{
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, rgb(220, 0, 253), rgb(98, 98, 255), rgb(26, 188, 191) 70%);
+    animation: glowing 20s linear infinite;
+    background-clip: text;
+    color: transparent;
+}
+
+.dp{
+    clip-path: path('M 0,80 A 20,20 0,0,1 20,60 L 80,60 A 20,20 0,0,0 100,40 L 100,20 A 20,20 0,0,1 120,0 L 300,0 A 20,20 0,0,1 320,20 L 320,300 A 20,20 0,0,1 300,320 L 240,320 A 20,20 0,0,0 220,340 L 220,360 A 20,20 0,0,1 200,380 L 20,380 A 20,20 0,0,1 0,360 Z');
+    width: 20rem;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+#communicate-icons {
+  width: auto;
+  margin: 2rem 0rem 2rem 0rem;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+#communicate-icons > a > i, .btn {
+  padding: 0.7rem;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  background-clip: text;
+  border:2px solid rgb(220, 0, 253);
+  border-radius: 0.7rem;
+  color: transparent;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn{
+  font-size: 1rem;
+}
+
+.communicate-icons > a > i:hover, .btn:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 767px) {
+  #Description {
+    margin: 0;
+    padding: 0 1rem;
+  }
+  #main-content {
+    width: inherit;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  #communicate-icons {
+    justify-content: center;
+  }
+  #communicate-icons > a > i, #communicate-icons > a {
+    font-size: 0.8rem;
+  } 
+}
