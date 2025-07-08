@@ -23,8 +23,6 @@ body{
     background-repeat: no-repeat;
     object-fit: cover;
     background-attachment: fixed;
-    -ms-overflow-style: none;  
-    scrollbar-width: none;
     font-family: 'JetBrains Mono';
 }
 
@@ -82,4 +80,13 @@ body > *, section > *, div > *, img{
     box-shadow: 0px 0px 300px 300px rgba(139, 138, 138, 0.218);
     z-index: -1;
     transform: rotateX(45deg);
+}
+
+html, body {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
