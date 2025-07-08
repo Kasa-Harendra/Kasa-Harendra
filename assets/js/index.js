@@ -15,7 +15,7 @@ const projects = [
         description: `<b style="color: yellow;">Tech Stack</b>: Python, Scrapy, PyQt5, Pandas, Matplotlib, CSV, XPath.<br>
                       <b style="color: yellow;">Overview:</b>
                         The Flipkart Scraper is a Python-based desktop application developed to automate the process of extracting product data from Flipkart's e-commerce platform. This project integrates web scraping, data processing, and graphical user interface (GUI) elements into a seamless tool for users to collect and analyze product-related insights—without requiring technical knowledge.`,
-        img: 'flipkart_scraper.jpg',
+        img: 'scraper.png',
         project_link: '#',
         git_link: 'https://github.com/Kasa-Harendra/Web-Scraping-Project',
         project_doc: 'Flipkart_Scraper.pdf'
@@ -146,7 +146,7 @@ function renderProjects() {
                     <p>${project.description}</p><br>
                     <div class="links">
                         <a href="${project.git_link}" class="btn">GitHub Link</a>
-                        ${((project.project_doc) !== '#' && (project.project_doc) !== '') ? '<a href="./documents/documentation/' + project.project_doc + '" class="btn">Full Doc</a>' : ''}
+                        ${((project.project_doc) !== '#' && (project.project_doc) !== '') ? '<a href="./documents/documentations/' + project.project_doc + '" class="btn">Full Doc</a>' : ''}
                         ${((project.project_link) !== '#' && (project.project_link) !== '') ? '<a href="' + project.project_link + '" class="btn">View</a>' : ''}
                     </div>
                 </div>
