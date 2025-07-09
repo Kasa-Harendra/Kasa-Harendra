@@ -49,11 +49,14 @@ export const certificates = [
         img: 'CDAC.png', 
         certificate_link: 'CDAC.pdf'
     },{
-        img: 'L4G.png', 
-        certificate_link: 'L4G.pdf'
-    },{
         img: 'CS50.png', 
         certificate_link: 'CS50_Python.pdf'
+    },{
+        img: 'DSA_Python.png', 
+        certificate_link: 'DSA_Python.pdf'
+    },{
+        img: 'L4G.png', 
+        certificate_link: 'L4G.pdf'
     },{
         img: 'DataScienceCC.png', 
         certificate_link: 'DataScienceCC.pdf'
