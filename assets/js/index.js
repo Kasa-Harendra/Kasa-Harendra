@@ -1,92 +1,34 @@
-const skills = [
-    { name: 'Python', icon: 'python.png', category: 'Programming Langs'},
-    { name: 'Java', icon: 'java.png', category: 'Programming Langs'},
-    { name: 'DataBase', icon: 'db.png', category: 'Data Analysis'},
-    { name: 'HMTL', icon: 'html.png', category: 'Programming Langs'},
-    { name: 'CSS', icon: 'css.png', category: 'Programming Langs'},
-    { name: 'Matplotlib', icon: 'matplotlib.png', category: 'Data Visualization'},
-    { name: 'Seaborn', icon: 'seaborn.svg', category: 'Data Visualization'},
-    { name: 'Excel', icon: 'excel.jpg', category: 'Data Analysis'}
-];
+import { skills } from './data.js';
+import { projects } from './data.js';
+import { certificates } from './data.js';
+import { skill_category } from './data.js';
 
-const projects = [
-    {
-        name: 'Flipkart Scraper',
-        description: `<b style="color: yellow;">Tech Stack</b>: Python, Scrapy, PyQt5, Pandas, Matplotlib, CSV, XPath.<br>
-                      <b style="color: yellow;">Overview:</b>
-                        The Flipkart Scraper is a Python-based desktop application developed to automate the process of extracting product data from Flipkart's e-commerce platform. This project integrates web scraping, data processing, and graphical user interface (GUI) elements into a seamless tool for users to collect and analyze product-related insights—without requiring technical knowledge.`,
-        img: 'scraper.png',
-        project_link: '#',
-        git_link: 'https://github.com/Kasa-Harendra/Web-Scraping-Project',
-        project_doc: 'Flipkart_Scraper.pdf'
-    },
-];
 
-const certificates = [
-    {
-        img: 'CDAC.png', 
-        certificate_link: 'CDAC.pdf'
-    },{
-        img: 'L4G.png', 
-        certificate_link: 'L4G.pdf'
-    },{
-        img: 'CS50.png', 
-        certificate_link: 'CS50_Python.pdf'
-    },{
-        img: 'DataScienceCC.png', 
-        certificate_link: 'DataScienceCC.pdf'
-    },{
-        img: 'OET.png', 
-        certificate_link: 'OET.pdf'
-    }
-]
+
 const contentContainer = document.getElementById('content-container');
 const projectsContainer = document.getElementById('projects-container');
 const skillsButton = document.getElementById('skills');
 const certificatesButton = document.getElementById('certifications');
 
 function renderSkills() {
+    let _skills = {};
     let content = '<div id="inner-skills-container">';
-    data_analy_skills = `<div class="skill-container">
-                        <h3 class="skill-field">Data Analytics Tools</h3>
+    for (let skill in skill_category) {
+        _skills[String(skill)] = `<div class="skill-container">
+                          <h3 class="skill-field">${skill_category[skill]}</h3>
                         `;
-    program_skills = `<div class="skill-container">
-                    <h3 class="skill-field">Programming Languages</h3>
-                    `
-    data_visualization_skills = `<div class="skill-container">
-                    <h3 class="skill-field">Data Visualization Tools</h3>
-                    `
-    
+    }
     skills.forEach(skill => {
-        if(skill.category === 'Data Analysis') {
-            data_analy_skills += `<div class="skill">
+        _skills[String(skill.category)] += `<div class="skill">
                                         <img src=./assets/media/skill_images/${skill.icon} class="skill-icon">
                                         <p class="skill-name">${skill.name}</p>
-                                  </div>`
-        }
-        if(skill.category === 'Programming Langs') {
-            program_skills += `<div class="skill">
-                                        <img src=./assets/media/skill_images/${skill.icon} class="skill-icon">
-                                        <p class="skill-name">${skill.name}</p>
-                               </div>`
-        }
-        if(skill.category === 'Data Visualization') {
-            data_visualization_skills += `<div class="skill">
-                                        <img src=./assets/media/skill_images/${skill.icon} class="skill-icon">
-                                        <p class="skill-name">${skill.name}</p>
-                               </div>`
-        }
-       
+                                    </div>`;
     });
-
-    all_skills = [data_analy_skills, program_skills, data_visualization_skills];
-    all_skills.forEach(skills => {
-        skills += `</div>`;
-        content += skills;
-    });
-
+    for (let skill in _skills) {
+        _skills[skill] += '</div>';
+        content += _skills[skill];
+    }
     content += `</div>`;
-
     contentContainer.innerHTML = content;
 }
 
@@ -160,7 +102,7 @@ function renderProjects() {
     projectsContainer.innerHTML = content;
 }
 
-skillsButton.addEventListener('change', () => {
+skillsButton.addEventListener('click', () => {
     contentContainer.classList.add('fade');
     setTimeout(() => {
         renderSkills();
@@ -168,10 +110,10 @@ skillsButton.addEventListener('change', () => {
     }, 300);
 });
 
-certificatesButton.addEventListener('change', () => {
+certificatesButton.addEventListener('click', () => {
     contentContainer.classList.add('fade');
     setTimeout(() => {
-        active = 0; 
+        active = 0;
         renderCertificates();
         contentContainer.classList.remove('fade');
     }, 300);
@@ -186,8 +128,6 @@ function left_certificate(){
     active--;
     renderCertificates();
 }
-
-
 
 if (skillsButton.checked) {
     renderSkills();
