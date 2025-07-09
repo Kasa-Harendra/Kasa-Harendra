@@ -119,12 +119,12 @@ certificatesButton.addEventListener('click', () => {
     }, 300);
 });
 
-function right_certificate(){
+window.right_certificate = function() {
     active++;
     renderCertificates();
 }
 
-function left_certificate(){
+window.left_certificate = function() {
     active--;
     renderCertificates();
 }
