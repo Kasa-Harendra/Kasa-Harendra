@@ -1,18 +1,22 @@
 export const skill_category = [
     'Programming Langs',
-    'Data Analysis',
-    'Data Visualization',
+    'Frameworks/Libraries',
+    'Tools',
 ]
 
 export const skills = [
     { name: 'Python', icon: 'python.png', category: 0},
     { name: 'Java', icon: 'java.png', category: 0},
-    { name: 'DataBase', icon: 'db.png', category: 1},
     { name: 'HMTL', icon: 'html.png', category: 0},
     { name: 'CSS', icon: 'css.png', category: 0},
-    { name: 'Matplotlib', icon: 'matplotlib.png', category: 2},
-    { name: 'Seaborn', icon: 'seaborn.svg', category: 2},
-    { name: 'Excel', icon: 'excel.jpg', category: 1}
+    { name: 'Matplotlib', icon: 'matplotlib.png', category: 1},
+    { name: 'Seaborn', icon: 'seaborn.svg', category: 1},
+    { name: 'Scrapy', icon: 'scrapy.png', category: 1},
+    { name: 'Excel', icon: 'excel.png', category: 2},
+    { name: 'VS Code', icon: 'vscode.svg', category: 2},
+    { name: 'Git', icon: 'git.jpg', category: 2},
+    { name: 'Django', icon: 'django.png', category: 1},
+    { name: 'Streamlit', icon: 'streamlit.png', category: 1}
 ];
 
 export const projects = [
