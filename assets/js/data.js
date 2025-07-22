@@ -17,6 +17,21 @@ export const skills = [
 
 export const projects = [
     {
+        name: 'README Generator AI App',
+        description: `
+        A modern web application that automatically generates professional README.md files for GitHub repositories using AI. It streamlines documentation creation by analyzing repo metadata and developer input.<br>
+        <b style="color: yellow;">Key Features:</b><br>
+            ‣ GitHub OAuth integration for secure repo access<br>
+            ‣ AI-powered README generation with project-specific sections <br>
+            ‣ Live markdown preview and editing <br>
+            ‣ One-click download of the generated README <br>
+        `,
+        img: 'ReadmeGenerator.jpg' ,
+        project_link: 'https://readme-generator-ai-app.vercel.app/',
+        git_link: 'https://github.com/Kasa-Harendra/Readme-Generator',
+        project_doc: "#"
+    },
+    {
         name: 'Data Tool: No-Code Data Analysis & Editing App ',
         description: `A Streamlit-based web application that enables users to upload, view, edit, analyze, and visualize datasets without writing code. Users can interactively clean data, generate statistics, and plot insights with ease.resulting in an average 60–65% reduction in manual coding time for standard exploratory data analysis (EDA) workflows (as measured against manual pandas scripting for equivalent tasks).<br>
                       <b style="color: yellow;">Tech Stack</b>: Python, Streamlit, Pandas, Matplotlib. <br>
