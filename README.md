@@ -139,7 +139,7 @@ class Harendra:
 
 ## 🔥 Featured Projects
 
-<div align="center">
+<div>
 
 ### ⚡ GPU-Accelerated Image Classification  
 *High-performance deep learning with PyTorch & CUDA*  
