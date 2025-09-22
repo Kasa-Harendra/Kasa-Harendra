@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Kasa Harendra
 
-<div align="center">
+<div align="center" margin-bottom="20px">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&width=600&height=100&lines=Full-Stack+AI+Developer;Application+Developer;Building+Production-Ready+Systems;3rd+Year+B.Tech+AI%2FML+Student" alt="Typing SVG" />
 </div>
 
@@ -323,7 +323,7 @@ mindmap
 
 ## 📞 Let's Connect!
 
-<div align="center">
+<div>
 
 I'm always excited to discuss:
 - 🤖 AI/ML system architecture and optimization
