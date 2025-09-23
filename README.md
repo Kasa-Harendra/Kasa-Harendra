@@ -301,8 +301,8 @@ mindmap
 
 | Timeline | Role | Organization | Achievement |
 |----------|------|--------------|-------------|
-| **2025 - Present** | AI Mentor | AI HUB | 50+ students mentored |
-| **2022 - 2026** | B.Tech Student | VVIT | CGPA: 9.38/10 |
+| **2025 - Present** | Student Admin | AI HUB | Student Admin |
+| **2022 - 2027** | B.Tech Student | VVIT | CGPA: 9.38/10 |
 
 </div>
 
